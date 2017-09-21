@@ -1,0 +1,279 @@
+body {
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box;
+	margin-top: 70px;
+	background-color: #000002;
+	font-family: 'Jura', sans-serif;
+	font-weight: 300;
+}
+/*====================*/
+/*Navigation Bar Settings*/
+/*====================*/
+nav {
+	box-sizing: border-box;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	background-color: #03080f;
+	padding: 0;
+	border-bottom: 1px solid rgba(255,255,255,.3);
+	z-index: 1;
+}
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+nav li {
+	position: relative;
+	width: auto;
+	float: left;
+}
+nav a {
+	text-decoration: none;
+	letter-spacing: 2px;
+	color: white;
+	display: block;
+	padding: 10px;
+	text-align: center;
+	transition: all .5s ease;
+}
+time {
+	font-style: italic;
+}
+nav li:hover {
+	background-color: #0f1c30;
+}
+.dropdown li:hover {
+	background-color: #03080f;
+}
+.active {
+	background-color: #0f1c30;
+}
+.dropdown {
+	left: 0;
+	opacity: 0;
+	width: 100%;
+	position: absolute;
+	visibility: hidden;
+	z-index: 1;
+	transition: all 0.5s ease;
+	border: 1px solid rgba(255,255,255,.3);
+
+}
+
+.dropdown li {
+	width: 100%;
+	background-color: #0f1c30;
+}
+li:hover ul.dropdown {
+	opacity: 1;
+	visibility: visible;
+}
+/*====================*/
+/*Main Body*/
+/*====================*/
+/*My unfortunately-hackish way of adding the social section*/
+
+#name {
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+#name a {
+	text-decoration: none;
+	color: white;
+	padding: 10px;
+	float: left;
+	text-transform: lowercase;
+	letter-spacing: 3px;
+}
+#name a:hover {
+	background-color: #0f1c30;
+}
+
+/*====================*/
+/*Header*/
+/*====================*/
+
+.home {
+	background-color: rgba(255,255,255,.05);
+	border-radius: 20px;
+	padding: 10px;
+}
+h1 {
+	font-size: 3rem;
+	margin: 0;
+	padding: 0;
+	color: #ff9d00;
+	letter-spacing: 1rem;
+	text-align: left;
+	border-bottom: 3px dashed rgba(255,255,255,.1);
+}
+/*====================*/
+/*Main Body*/
+/*====================*/
+
+.container {
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin: 40px 0;
+	padding: 10px;
+}
+/*====================*/
+/*Slide-In Tabs*/
+/*====================*/
+
+h2 {
+	color: #ff9d00;
+	font-size: 2rem;
+}
+.content {
+	font-family: 'Merriweather', serif;
+	display: none;
+	width: 50%;
+	padding: 30px;
+	color: white;
+	background-color: rgba(255,255,255,.05);
+	border-radius: 30px;
+	letter-spacing: 1px;
+	transition: all 0.5s ease-in-out;
+}
+.content a {
+	text-decoration: none;
+}
+.content a:hover {
+	text-decoration: underline;
+}
+.main {
+	display: block;
+}
+.projects a {
+	color: white;
+}
+
+
+/*====================*/
+/*Projects Tab*/
+/*====================*/
+#projects-table {
+	margin: 0 auto;
+}
+#projects-table th:first-of-type {
+	text-align: left;
+}
+#projects-table th:nth-of-type(2) {
+	text-align: right;
+}
+#projects-table td:nth-of-type(2n){
+	text-align: right;
+}
+
+/*====================*/
+/*Resume Tab*/
+/*====================*/
+.resume > table {
+	width: 100%;
+	font-family: 'Merriweather', serif;
+	font-size: 0.9rem;
+	border: 0;
+	margin-top: 20px;
+}
+td {
+	width: 50%;
+	border: 0;
+	vertical-align: top;
+}
+td > a {
+	text-decoration: none;
+	color: white;
+}
+td > ul {
+	/*list-style: none;*/
+	margin: 0 0 20px 20px;
+	padding: 0;
+}
+h3, h4 {
+	font-family: 'Jura', sans-serif;
+	color: #ff9d00;
+	margin: 0;
+	padding: 0;
+}
+h5 {
+	color: #FFD033;
+	font-weight: normal;
+	font-size: 0.9em;
+	margin: 0;
+	padding: 0;
+}
+h4 a {
+	color: #ff9d00;
+	text-decoration: none;
+}
+h4 a:hover {
+	text-decoration: underline;
+}
+h5 a {
+	color: #FFD033;
+	text-decoration: none;
+}
+h5 a:hover {
+	text-decoration: underline;
+}
+em a {
+	color: white;
+	text-decoration: none;
+}
+em a:hover {
+	text-decoration: underline;
+}
+@media only screen and (max-device-width: 600px) {
+	body {
+		font-size: 30px;
+	}
+	nav a {
+		font-size: 1em;
+		letter-spacing: 2px;
+		padding: 25px;
+	}
+	h1 {
+		text-align: center;
+		font-size: 2.5em;
+	}
+	.home {
+		margin-top: 10vh;
+	}
+	#name {
+		display: none;
+	}
+	.content {
+		width: 95vw;
+		text-align: justify;
+	}
+	.resume > table{
+		text-align: left;
+		font-size: .25em;
+	}
+	.projects > ul {
+		list-style: none;
+		padding: 0;
+		text-align: left;
+		line-height: 4em;
+	}
+	.projects > ul li a {
+		padding: 10px;
+		border: 3px solid white;
+		border-radius: 10px;
+	}
+	#projects-table {
+		width: 100%;
+		font-size: 3rem;
+		line-height: 5rem;
+	}
+}

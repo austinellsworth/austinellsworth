@@ -1,0 +1,77 @@
+body {
+  font-family: "Slabo 27px", serif;
+}
+input, 
+button {
+  text-align: center;
+  border-radius: 5%;
+  border: 1px solid rgba(0,0,0,.4);
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+hr {
+  border-top: 3px double rgba(0,0,0,.2);
+  width: 70%;
+}
+nav {
+  background-color: white;
+  border-bottom: 1px solid black;
+}
+nav a,
+.navbar-nav a {
+  color: white;
+  text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+footer {
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid black;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 2rem;
+  color: white;
+  text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+footer p {
+  margin: 0;
+}
+.nav-link {
+  margin: 0 5px;
+  /*border: 1px solid black;*/
+}
+.block {
+  display:block;
+}
+.wide {
+  width: 32%;
+}
+.body-content {
+  background-color: rgba(255,255,255,.5);
+}
+.hide {
+  display:none;
+}
+.picker,
+.hex,
+.rgb {
+  width: 60px;
+}
+#title {
+  margin-top: 90px;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Bitter|Dosis|Montserrat|Noto+Sans|Open+Sans+Condensed:300|PT+Serif|Raleway|Roboto+Condensed|Roboto+Slab|Slabo+27px" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../assets/css/main2.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.min.css">
+<script type="text/javascript" src="../assets/js/lib/jquery-3.2.1.min.js"></script>
+	<title></title>
+</head>
+<body>
+<nav class="nav default top">
+	<ul>
+		<li class="left"><a class="btn">Dropdown <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+			<ul class="dropdown">
+			<li class="left"><a href="#">Link 1</a></li>
+			<li class="left"><a href="#">Link 2</a></li>
+			<li class="left"><a href="#">Link 3</a></li>
+			<li class="left"><a href="#">Link 4</a></li>
+			</ul>
+		</li>
+		<li class="left"><a id="link1" class="btn" href="#">Link</a></li>
+		<li class="left"><a id="link2" class="btn" href="#">Link</a></li>
+		<li class="left"><a id="link3" class="btn" href="#">Link</a></li>
+		<li class="left"><a id="link4" class="btn" href="#">Link</a></li>
+	</ul>
+</nav>
+
+<div class="picker">
+	<div>
+		<h2>Whole Page</h2>
+		<hr>
+		<div>
+			Style Presets
+			<select id="stylePresets">
+				<option value="0">Default</option>
+				<option value="1">Style 1</option>
+				<option value="2">Style 2</option>
+				<option value="3">Style 3</option>
+				<option value="4">Style 4</option>
+				<option value="5">Style 5</option>
+				<option value="6">Style 6</option>
+				<option value="7">Style 7</option>
+				<option value="8">Style 8</option>
+				<option value="9">Style 9</option>
+			</select>
+		</div>
+		<hr>
+		<div>
+			<h3>Background Color</h3>
+			<input class="bg pick"type="color" name="" value="#317df7">
+			#
+			<input class="bg hex" type="text" name="" value="317df7" maxlength="6" minlength="6">
+			
+			R <input class="bg r" type="number" name="" value="49">
+			G <input class="bg g" type="number" name="" value="125">
+			B <input class="bg b" type="number" name="" value="247">
+			<button class="bg submit">Update RGB</button>
+		</div>
+		<div>
+			<button id="bgRandom">Surprise Me</button>
+		</div>
+		<hr>
+		<div>
+			<h3>Font</h3>
+			<select id="font">
+				<option value="'Slabo 27px', serif">Slabo 27px</option>
+				<option value="'Montserrat', sans-serif">Montserrat</option>
+				<option value="'Roboto Condensed', sans-serif">Roboto Condensed</option>
+				<option value="'Raleway', sans-serif">Raleway</option>
+				<option value="'Open Sans Condensed', sans-serif">Open Sans Condensed</option>
+				<option value="'Roboto Slab', serif">Roboto Slab</option>
+				<option value="'Noto Sans', sans-serif">Noto Sans</option>
+				<option value="'Bitter', serif">Bitter</option>
+				<option value="'PT Serif', serif">PT Serif</option>
+				<option value="'Dosis', sans-serif">Dosis</option>
+			</select>
+			<button id="randomFont">Surprise Me</button>
+		</div>
+		<hr>
+		<div>
+			<h3>Toggle Page Elements</h3>
+			Navigation Bar
+			<input type="checkbox" name="navOnOff" checked>
+			Top<input type="radio" name="navLocation" value="top" checked>
+			Bottom<input type="radio" name="navLocation" value="bottom">
+		</div>
+		<div>
+			Footer
+			<input id="footerToggle" type="checkbox" name="" checked>
+		</div>
+		</div>
+	<div>
+		<h2>Navigation Bar</h2>
+		<hr>
+		<div>
+			<h3>Navigation Bar Background</h3>
+			<input class="nb pick"type="color" name="" value="#c0c0c0">
+			#
+			<input class="nb hex" type="text" name="" value="c0c0c0" maxlength="6">
+			
+			R <input class="nb r" type="number" name="" value="192">
+			G <input class="nb g" type="number" name="" value="192">
+			B <input class="nb b" type="number" name="" value="192">
+			<button class="nb submit">Update RGB</button>
+		</div>
+		<div>
+			<button id="navRandom">Surprise Me</button>
+		</div>		<hr>
+		<div>
+			<h3>Button Text</h3>
+			<input id="btn1txt" type="text" name="" value="" placeholder="Link">
+			<input id="btn2txt" type="text" name="" value="" placeholder="Link">
+			<input id="btn3txt" type="text" name="" value="" placeholder="Link">
+			<input id="btn4txt" type="text" name="" value="" placeholder="Link">
+		</div>
+	</div>
+	<div>
+		<h2>Navigation Buttons</h2>
+		<hr>
+		<div>
+			<h3>Navigation Button Color</h3>
+			<input class="bt pick"type="color" name="" value="#317df7">
+			#
+			<input class="bt hex" type="text" name="" value="317df7" maxlength="6" minlength="6">
+			
+			R <input class="bt r" type="number" name="btnR" value="49">
+			G <input class="bt g" type="number" name="btnG" value="125">
+			B <input class="bt b" type="number" name="btnB" value="247">
+			<button class="bt submit">Update RGB</button>
+		</div>
+		<div>
+			<button id="btnRandom">Surprise Me</button>
+		</div>
+		<hr>
+		<!-- <div>
+			<h3>Button Text Color</h3>
+			<input id="bgCPicker"type="color" name="" value="#317df7">
+			#
+			<input id="hexBg" type="text" name="" value="317df7" maxlength="6" minlength="6">
+			
+			R <input id="BgR" class="RGB" type="number" name="BgR" value="49">
+			G <input id="BgG" class="RGB" type="number" name="BgG" value="125">
+			B <input id="BgB" class="RGB" type="number" name="BgB" value="247">
+			<button id="bGrgb">Update RGB</button>
+		</div> -->
+		<hr>
+		<div>
+			<h3>Alignment</h3>
+			Left<input type="radio" name="navAlign" value="left" checked>
+			Right<input type="radio" name="navAlign" value="right">
+		</div>
+		<hr>
+		<div>
+			<h3>Button Appearance</h3>
+			Corner Rounding <input id="btnRnd" type="number" name="" value="0">
+			Space Between <input id="btnMar" type="number" name="" value="0">
+		</div>
+	</div>
+	<div>
+		<h2>Footer</h2>
+		<hr>
+		<div>
+			<h3>Footer Background</h3>
+			<input class="ft pick"type="color" name="" value="#c0c0c0">
+				#
+			<input class="ft hex" type="text" name="" value="c0c0c0" maxlength="6">
+			
+			R <input class="ft r" type="number" name="" value="192">
+			G <input class="ft g" type="number" name="" value="192">
+			B <input class="ft b" type="number" name="" value="192">
+			<button class="ft submit">Update RGB</button>
+		</div>
+		<div>
+			<button id="footerRandom">Surprise Me</button>
+		</div>		<hr>
+		<div>
+			<h3>Footer Text</h3>
+			<input id="footerTxt" type="text" name="" placeholder="This is a footer">
+		</div>
+
+	</div>
+</div>
+<footer>This is a footer</footer>
+<script type="text/javascript" src="../assets/js/styles2.js"></script>
+</body>
+</html>

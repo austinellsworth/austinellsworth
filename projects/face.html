@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Type Something</title>
+	<script type="text/javascript" src="../assets/js/lib/paper-full.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.28/howler.js"></script>
+	<link rel="stylesheet" type="text/css" href="../assets/css/face.css">
+
+	<script type="text/paperscript" canvas="myCanvas">
+		var keyData = {
+			q: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/q.m4a']
+				})
+			},
+			w: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/w.m4a']
+				})
+			},
+			e: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/e.m4a']
+				})
+			},
+			r: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/r.m4a']
+				})
+			},
+				t: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/t.m4a']
+				})
+			},
+			y: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/y.m4a']
+				})
+			},
+			u: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/u.m4a']
+				})
+			},
+			i: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/i.m4a']
+				})
+			},
+			o: {
+				sound: new Howl({
+					urls: ['../assets/sounds/typesomething/o.m4a']
+				})
+			},
+			p: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/p.m4a']
+				})
+			},
+			a: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/a.m4a']
+				})
+			},
+			s: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/s.m4a']
+				})
+			},
+				d: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/d.m4a']
+				})
+			},
+			f: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/f.m4a']
+				})
+			},
+			g: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/g.m4a']
+				})
+			},
+			h: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/h.m4a']
+				})
+			},
+			j: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/j.m4a']
+				})
+			},
+			k: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/k.m4a']
+				})
+			},
+			l: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/l.m4a']
+				})
+			},
+			z: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/z.m4a']
+				})
+			},
+			x: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/x.m4a']
+				})
+			},
+			c: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/c.m4a']
+				})
+			},
+			v: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/v.m4a']
+				})
+			},
+			b: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/b.m4a']
+				})
+			},
+			n: {
+				sound: new Howl({
+					urls: ['../assets/sounds/typesomething/n.m4a']
+				})
+			},
+			m: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/m.m4a']
+				})
+			},
+			0: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/0.m4a']
+				})
+			},
+			1: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/1.m4a']
+				})
+			},
+			2: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/2.m4a']
+				})
+			},
+			3: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/3.m4a']
+				})
+			},
+			4: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/4.m4a']
+				})
+			},
+			5: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/5.m4a']
+				})
+			},
+			6: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/6.m4a']
+				})
+			},
+			7: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/7.m4a']
+				})
+			},
+			8: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/8.m4a']
+				})
+			},
+			9: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/9.m4a']
+				})
+			},
+			space: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/space.m4a']
+				})
+			},
+			enter: {
+				sound: new Howl({
+		  		urls: ['../assets/sounds/typesomething/enter.m4a']
+				})
+			},
+		}
+
+		var faces = [];
+		
+
+		function onKeyDown(event) {
+			if(keyData[event.key]){
+				var maxPoint = new Point(view.size.width, view.size.height);
+				var randomPoint = Point.random();
+				var point = maxPoint * randomPoint;
+				newFace = (new Raster('face', point));
+				keyData[event.key].sound.play();
+				faces.push(newFace);
+			}
+		}
+
+		
+
+		function onFrame(event){
+      for(var i = 0; i < faces.length; i++){
+        faces[i].scale(0.95);
+        faces[i].rotate(5);
+        if(faces[i].size < 10){
+        	faces[i].remove();
+          	faces.splice(i, 1);
+        }
+      }
+    }
+	</script>
+</head>
+<body>
+	<canvas id="myCanvas" resize>
+	</canvas>
+	<img id="face" src="../assets/img/face2.gif">
+</body>
+</html>

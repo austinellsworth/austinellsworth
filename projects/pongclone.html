@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pong Clone</title>
+	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../assets/css/pongclone.css">
+</head>
+<body>
+	<h3>Use mouse to control paddle.</h3>
+	<h3>Click on the play area to start a new round/game!</h3>
+	<h3>First to 5 wins.</h3>
+	<div id="wrapper">
+		<svg id="svg-wrapper" width="1000" height ="500" viewbox="0 0 1000 500">
+			<svg>
+				<rect id="player1" x="10" y="0" width="10" height="100">
+			</svg>
+			<svg>
+				<rect id="player2" x="980" y="0" width="10" height="100">
+			</svg>
+			<svg>
+				<image id="ball" x="0" y="0" width="30" height="40" href="../assets/img/face.png">
+			</svg>
+			<svg>
+				<text id="win-announcement" text-anchor="middle" x="500" y="400"></text>
+			</svg>
+			<svg>
+				<text id="scoreboard" text-anchor="middle" x="500" y="250"></text>
+			</svg>
+		</svg>
+	</div>
+	<div>
+		<button id="easy">Easy</button>
+		<button class="active-button" id="normal">Normal</button>
+		<button id="hard">Hard</button>	
+		<button id="gravity">Gravity: Off</button>
+	</div>
+	<script type="text/javascript" src="../assets/js/pongclone.js"></script>
+</body>
+</html>
+<!-- TRY TO GET RID OF AS MANY HARDCODED VALUES AS POSSIBLE -->
+<!-- WHEN WRITING CODE, USE DYNAMIC VALUES RATHER THAN HARDCODED!!! -->
+<!-- Go through code and find unnecessary steps. Eliminate them. -->

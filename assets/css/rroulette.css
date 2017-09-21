@@ -1,0 +1,50 @@
+body {
+	text-align: center;
+	background-color: slategrey;
+	font-family: 'Josefin Sans', sans-serif;
+	box-sizing: border-box;
+}
+button {
+	font-family: 'Josefin Sans', sans-serif;
+	outline: none;
+	display: block;
+	margin: 30px auto;
+	padding: 40px 0;
+	background-color: black;
+	color: white;
+	border: 1px solid white;
+	font-size: 2rem;
+	width: 100%;
+}
+h1 {
+	font-size: 4rem;
+	text-shadow: 0 10px 30px rgba(0,0,0,.4);
+	margin: 0;
+}
+h2 {
+	font-size: 3rem;
+	margin: 0;
+}
+#container {
+	padding: 1em;
+	max-width: 500px;
+	min-height: 800px;
+	margin: 0 auto;
+	border: 3px solid black;
+	border-radius: 5%;
+}
+#new-game {
+	background-color: red;
+}
+#spin-cylinder[disabled],
+#pull-trigger[disabled],
+#new-game[disabled] {
+	background-color: grey;
+}
+@media only screen and (max-device-width: 480px) {
+	#container {
+		min-width: 90vw;
+		height: 90vh;
+		margin-top: 5vh;
+	}
+}

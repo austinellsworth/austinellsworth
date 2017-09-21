@@ -1,0 +1,35 @@
+
+body {
+	font-family: 'Nova Square', cursive;	
+}
+button {
+	font-family: 'Nova Square', cursive;
+	width: 70px;
+	height: 40px;
+	margin: 2px 0;
+	outline: none;
+}
+.container {
+	margin: 10% auto 0 auto;
+	padding: 10px;
+	max-width: 350px;
+	text-align: center;
+	border: 2px solid black;
+}
+#result {
+	border: 1px solid black;
+	height: 40px;
+	margin: 10px auto;
+	width: 290px;
+	font-size: 40px;
+	line-height: 1em;
+	text-align: right;
+}
+#last-calculation {
+	height: 30px;
+	margin: 0 auto;
+	width: 290px;
+	font-size: 30px;
+	line-height: 1em;
+	text-align: right;
+}

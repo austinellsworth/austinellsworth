@@ -1,0 +1,45 @@
+body {
+	box-sizing: border-box;
+	text-align: center;
+	font-family: 'VT323', monospace;
+	font-size: 30px;
+	background-color: black;
+	color: white;
+}
+svg {
+	border: 5px solid black;
+	margin: 0 auto 25px auto;
+	background-color: white;
+}
+button {
+	outline: none;
+	margin: 5px;
+	min-width: 200px;
+	min-height: 50px;
+	font-family: 'VT323', monospace;
+	font-size: 2rem;
+	background-color: #55fb2f;
+	border: 3px solid #F3F315;
+}
+h3 {
+	width: 1000px;
+	margin: 0 auto;
+	font-size: 1.5rem;
+	font-weight: normal;
+}
+.active-button {
+	background-color: #F3F315;
+	border: 3px solid #55fb2f;
+}
+#wrapper {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#win-announcement {
+	font-size: 3em;
+}
+#scoreboard {
+	font-size: 4em;
+}
