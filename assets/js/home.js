@@ -9,6 +9,11 @@ Content.prototype.contentSlide = function () {
   $('.content').css('display', 'none')
   this.div.css('display', 'block')
 }
+Content.prototype.listener = function () {
+  this.tab.on('click', function () {
+    this.contentSlide()
+  }.bind(this))
+}
 
 const tabs = {
   home: new Content($('#h'), $('.main')),
@@ -17,20 +22,12 @@ const tabs = {
   resume: new Content($('.r'), $('.resume'))
 }
 
-tabs.home.tab.on('click', function () {
-  tabs.home.contentSlide()
-})
-tabs.about.tab.on('click', function () {
-  tabs.about.contentSlide()
-})
-tabs.projects.tab.on('click', function () {
-  tabs.projects.contentSlide()
-})
-tabs.resume.tab.on('click', function () {
-  tabs.resume.contentSlide()
-})
+for (item in tabs) {
+  tabs[item].listener()
+}
 
 window.onload = function () {
   let url = window.location.href.split('#')[1]
   tabs[url].contentSlide()
 }
+//
