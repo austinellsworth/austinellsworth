@@ -95,6 +95,10 @@ li:hover ul.dropdown {
 #name a:hover {
 	background-color: #0f1c30;
 }
+#title-name span {
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+}
 
 /*====================*/
 /*Header*/
@@ -110,7 +114,7 @@ h1 {
 	margin: 0;
 	padding: 0;
 	color: #ff9d00;
-	letter-spacing: 1rem;
+	letter-spacing: .15rem;
 	text-align: left;
 	border-bottom: 3px dashed rgba(255,255,255,.1);
 }
@@ -137,6 +141,7 @@ h2 {
 .content {
 	font-family: 'Merriweather', serif;
 	display: none;
+	opacity: 0;
 	width: 50%;
 	padding: 30px;
 	color: white;

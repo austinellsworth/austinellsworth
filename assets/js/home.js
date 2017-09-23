@@ -6,8 +6,14 @@ function Content (tab, div) {
 Content.prototype.contentSlide = function () {
   $('.navbar li a').removeClass('active')
   this.tab.addClass('active')
-  $('.content').css('display', 'none')
-  this.div.css('display', 'block')
+  $('.content').css('opacity', '0')
+  setTimeout(function () {
+    $('.content').css('display', 'none')
+    this.div.css('display', 'block')
+    setTimeout(function () {
+      this.div.css('opacity', '1')
+    }.bind(this), 10)
+  }.bind(this), 550)
 }
 Content.prototype.listener = function () {
   this.tab.on('click', function () {
@@ -27,7 +33,14 @@ for (item in tabs) {
 }
 
 window.onload = function () {
+  setTimeout(function () {
+    for (let i = 0; i < $('#title-name span').length; i++) {
+      setTimeout(function () { $('#title-name span')[i].style.opacity = 1 }, (i * 100))
+    }
+  }, 500)
   let url = window.location.href.split('#')[1]
+  if (!url) {
+    url = 'home'
+  }
   tabs[url].contentSlide()
 }
-//
